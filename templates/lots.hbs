@@ -2,11 +2,16 @@
 
 <h3>List of current lots</h3>
 
-<ul>
+<ul class="lotlist">
 {{#each}}
 
-  <li> {{#link-to 'lot' this.id}}{{title}}{{/link-to}}</li>
-
+  <li> {{#link-to 'lot' this.id}}{{title}}{{/link-to}}
+    <ul>
+      {{#each items}}
+          <li class='flat'><img src={{image}} class="img-thumbnail"></li>
+      {{/each}}
+    </ul>
+  </li>
 {{/each}}
 </ul>
 

@@ -1,14 +1,33 @@
-.itemlist li {
+.headerstyle {
+  text-align: center;
+
+}
+.headerstyle  a:hover {
+  text-decoration: none;
+}
+
+li {
   list-style: none;
 }
 
 .itemlist li img {
   width: 50%;
+}
 
-
+.lotlist li img {
+  width: 25%;
+  min-height:25%;
 }
 
 
 .full {
   width: 75%;
 }
+
+
+.flat{
+  display:inline;
+}
+/*img {
+  border-radius: 10px;
+}*/
