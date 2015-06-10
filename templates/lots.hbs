@@ -1,17 +1,18 @@
 
 
-<h3>List of current lots</h3>
+<h3>Current Lots:</h3>
 
 <ul class="lotlist">
 {{#each}}
 
-  <li> {{#link-to 'lot' this.id}}{{title}}{{/link-to}}
+  <li>{{#link-to 'lot' this.id classNames="lot-title"}}{{title}}{{/link-to}}
     <ul>
       {{#each items}}
           <li class='flat'><img src={{image}} class="img-thumbnail"></li>
       {{/each}}
     </ul>
   </li>
+  <hr>
 {{/each}}
 </ul>
 
