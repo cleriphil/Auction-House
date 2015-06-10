@@ -1,0 +1,15 @@
+<h1> Lot title: {{title}}</h1>
+
+<h3>Description: {{description}}</h3>
+
+<h3>Auction date: {{date}}</h3>
+
+<h2>Items:</h2>
+<ul class="itemlist">
+  {{#each items}}
+   <li>{{#link-to 'item' this.id}}<img src={{image}}>{{/link-to}}</li>
+   <li>Description: {{description}}</li>
+  {{/each}}
+</ul>
+<p>{{#link-to 'new-item' this.id classNames="btn btn-primary"}}Add New Item to this lot{{/link-to}}</p>
+ {{outlet}}

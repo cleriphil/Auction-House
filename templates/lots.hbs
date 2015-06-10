@@ -1,0 +1,13 @@
+
+
+<h3>List of current lots</h3>
+
+<ul>
+{{#each}}
+
+  <li> {{#link-to 'lot' this.id}}{{title}}{{/link-to}}</li>
+
+{{/each}}
+</ul>
+
+<p>{{#link-to 'new-lot' classNames="btn btn-primary"}}Add New Lot{{/link-to}}</p>

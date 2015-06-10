@@ -2,7 +2,16 @@
 
 <ul class="itemlist">
 {{#each}}
-  <li><img src={{image}}></li>
+  <li>
+    {{#link-to 'item' this.id}}<img src={{image}}>{{/link-to}}
+    <p>
+      Owner: {{owner}} ||
+
+      Backstory: {{backstory}} ||
+
+      Starting price: {{starting_price}}
+    </p>
+  </li>
 {{/each}}
 </ul>
 

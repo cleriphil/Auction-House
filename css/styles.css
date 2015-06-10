@@ -1,0 +1,14 @@
+.itemlist li {
+  list-style: none;
+}
+
+.itemlist li img {
+  width: 50%;
+
+
+}
+
+
+.full {
+  width: 75%;
+}

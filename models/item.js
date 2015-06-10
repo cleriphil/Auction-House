@@ -7,4 +7,5 @@ AuctionHouse.Item = DS.Model.extend({
   backstory: DS.attr(),
   year_acquired: DS.attr(),
   image: DS.attr(),
+  lot: DS.belongsTo('lot', {async: true})
 });
