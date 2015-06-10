@@ -1,0 +1,1 @@
+AuctionHouse = Ember.Application.create();
