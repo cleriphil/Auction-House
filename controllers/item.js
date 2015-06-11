@@ -10,10 +10,11 @@ AuctionHouse.ItemController = Ember.ObjectController.extend({
     },
     delete: function() {
       if(confirm('Are you sure??')) {
-        item = this.get('model');
-        this.get('controllers.lot.model').get('items').removeObject(item);
+        var item = this.get('model');
+        var lot = this.get('controllers.lot.model');
+        lot.get('items').removeObject(item);
+        lot.save();
         item.destroyRecord();
-        debugger;
         // this.transitionToRoute('lots');
       }
     }
