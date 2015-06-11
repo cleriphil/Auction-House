@@ -1,26 +1,63 @@
 <h1>{{title}}</h1>
 
-<img class= 'full img-thumbnail' src={{image}}>  <p>
-    Description: {{description}}
-  </p>
-
-  <p>
-    Owner: {{owner}}
-  </p>
+{{#if isEditing}}
 
 
-  <p>
-    Bid number: {{bid_number}}
-  </p>
+  <form>
+    <label for="title">Item title</label>
+    {{input id="title" class="form-control" value=title}}
 
-  <p>
-    Starting price: ${{starting_price}}
-  </p>
+    <label for="description">Item description</label>
+    {{textarea id="description" class="form-control" value=description}}
 
-  <p>
-    Backstory: {{backstory}}
-  </p>
+    <label for="owner">Item owner</label>
+    {{input id="owner" class="form-control" value=owner}}
 
-  <p>
-    Year acquired: {{year_acquired}}
-  </p>
+    <label for="starting_price">Item starting price</label>
+    {{input id="starting_price" class="form-control" value=starting_price}}
+
+    <label for="backstory">Item backstory</label>
+    {{input id="backstory" class="form-control" value=backstory}}
+
+    <label for="year_acquired">Year acquired</label>
+    {{input id="year_acquired" class="form-control" value=year_acquired}}
+
+    <label for="image">Item image</label>
+    {{input id="image" class="form-control" value=image}}
+
+  <br>
+      <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+{{else}}
+
+
+
+
+  <img class= 'full img-thumbnail' src={{image}}>  <p>
+      Description: {{description}}
+    </p>
+
+    <p>
+      Owner: {{owner}}
+    </p>
+
+
+    <p>
+      Bid number: {{bid_number}}
+    </p>
+
+    <p>
+      Starting price: ${{starting_price}}
+    </p>
+
+    <p>
+      Backstory: {{backstory}}
+    </p>
+
+    <p>
+      Year acquired: {{year_acquired}}
+    </p>
+
+  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+{{/if}}

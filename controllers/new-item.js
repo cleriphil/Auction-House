@@ -6,11 +6,11 @@ AuctionHouse.NewItemController = Ember.Controller.extend({
         title: this.get('title'),
         description: this.get('description'),
         owner: this.get('owner'),
-        bid_number: this.get('bid_number'),
         starting_price: this.get('starting_price'),
         backstory: this.get('backstory'),
         year_acquired: this.get('year_acquired'),
         image: this.get('image'),
+        bid_number: Math.round(Math.random() * 100000),
       });
 
 
@@ -20,7 +20,18 @@ AuctionHouse.NewItemController = Ember.Controller.extend({
       lot.get('items').pushObject(item);
       lot.save();
 
+
+      this.set('title', '');
+      this.set('description', '');
+      this.set('owner', '');
+      this.set('starting_price', '');
+      this.set('backstory', '');
+      this.set('year_acquired', '');
+      this.set('image', '');
+
       this.transitionToRoute('lot', lot.id);
     }
   }
+
+
 })

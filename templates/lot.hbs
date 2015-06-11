@@ -15,3 +15,7 @@
 </ul>
 <p>{{#link-to 'new-item' this.id classNames="btn btn-primary"}}Add New Item to this lot{{/link-to}}</p>
  {{outlet}}
+
+
+<button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+<button class="btn btn-danger" {{action 'delete'}}>Delete</button>
