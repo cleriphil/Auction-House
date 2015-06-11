@@ -8,7 +8,7 @@
   <li>{{#link-to 'lot' this.id classNames="lot-title"}}{{title}}{{/link-to}}
     <ul>
       {{#each items}}
-          <li class='flat'><img src={{image}} class="img-thumbnail"></li>
+          {{#link-to 'item' this.id }}<li class='flat'><img src={{image}} class="img-thumbnail"></li>{{/link-to}}
       {{/each}}
     </ul>
   </li>
@@ -17,3 +17,12 @@
 </ul>
 
 <p>{{#link-to 'new-lot' classNames="btn btn-primary"}}Add New Lot{{/link-to}}</p>
+<p>Items List</p>
+<ul>
+
+  {{controllers.items.title}}
+  {{#each controllers.items.model}}
+
+    <li>{{title}}</li>
+  {{/each}}
+</ul>
