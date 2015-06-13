@@ -26,7 +26,7 @@
     {{input id="image" class="form-control" value=image}}
 
   <br>
-      <button class="btn btn-primary" {{action 'save'}}>Save</button>
+      <button class="btn btn-default" {{action 'save'}}>Save</button>
   </form>
 {{else}}
 
@@ -58,6 +58,6 @@
       Year acquired: {{year_acquired}}
     </p>
 
-  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
-  <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+  <button class="btn btn-default" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-warning" {{action 'delete'}}>Delete</button>
 {{/if}}

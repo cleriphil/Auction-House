@@ -1,7 +1,3 @@
-
-
-<h3>Current Lots:</h3>
-
 <ul class="lotlist">
 {{#each}}
 
@@ -16,13 +12,4 @@
 {{/each}}
 </ul>
 
-<p>{{#link-to 'new-lot' classNames="btn btn-primary"}}Add New Lot{{/link-to}}</p>
-<p>Items List</p>
-<ul>
-
-  {{controllers.items.title}}
-  {{#each controllers.items.model}}
-
-    <li>{{title}}</li>
-  {{/each}}
-</ul>
+<p>{{#link-to 'new-lot' classNames="btn btn-default"}}Add New Lot{{/link-to}}</p>

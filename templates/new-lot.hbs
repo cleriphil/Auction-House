@@ -1,4 +1,4 @@
-<h2>Add a new lot</h2>
+<h2>Add New Lot</h2>
 
 
 <form>
@@ -8,9 +8,9 @@
   <label for="description">Description</label>
   {{textarea id="description" class="form-control" value=description}}
 
-  <label for="date">Date</label>
+  <label for="date">Auction Date</label>
   {{input id="date" class="form-control" type="date" value=date}}
 <br>
 
-    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+    <button class="btn btn-default" {{action 'save'}}>Save</button>
 </form>

@@ -1,12 +1,26 @@
 .headerstyle {
-  text-align: center;
   color: #000000;
-  font-size: 50px;
+  font-size: 100px;
+  font-family: 'Lora', serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 20px;
+
+}
+
+.contentbox {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 
 }
 
 a:hover {
   text-decoration: none;
+  background-color: #FFFFB2;
 }
 
 li {
@@ -24,6 +38,7 @@ li {
 
 .lot-title {
   color: #CF5300;
+  font-size: 50px;
 }
 
 
