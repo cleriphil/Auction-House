@@ -10,6 +10,11 @@ body {
 
 }
 
+.heading-font {
+  font-family: 'Lora', serif;
+
+}
+
 .contentbox {
   border: 1px solid black;
   border-radius: 10px;
